@@ -15,4 +15,3 @@ class UserLink(AbstractBase):
     )
     short_url = models.CharField()
     short_url_id = models.IntegerField()
-

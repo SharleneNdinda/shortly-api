@@ -82,13 +82,13 @@ Shortly is a simple light-weight service. It is meant to deliver the following:
 ```
 
 [contributors-shield]: https://img.shields.io/github/contributors/SharleneNdinda/momo-cafe?style=for-the-badge
-[contributors-url]: https://github.com/SharleneNdinda/momo-cafe/graphs/contributors
+[contributors-url]: https://github.com/SharleneNdinda/shortly-api/contributors
 [forks-shield]: https://img.shields.io/github/forks/SharleneNdinda/momo-cafe?style=for-the-badge
-[forks-url]: https://github.com/SharleneNdinda/momo-cafe/forks
+[forks-url]: https://github.com/SharleneNdinda/shortly-api/forks
 [stars-shield]: https://img.shields.io/github/stars/SharleneNdinda/momo-cafe?style=for-the-badge
-[stars-url]: https://github.com/SharleneNdinda/momo-cafe/stargazers
+[stars-url]: https://github.com/SharleneNdinda/shortly-api/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SharleneNdinda/momo-cafe?style=for-the-badge
-[issues-url]: https://github.com/SharleneNdinda/momo-cafe/issues
+[issues-url]: https://github.com/SharleneNdinda/shortly-api/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: in/sharlene-mutuku-86571518b
 [product-screenshot]: images/architecture.png

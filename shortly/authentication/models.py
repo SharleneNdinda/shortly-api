@@ -1,10 +1,8 @@
-from django.db import models
-
 # Create your models here.
 import uuid
 
-from django.contrib.auth.models import AbstractBaseUser, AbstractUser, BaseUserManager, PermissionsMixin
-
+from django.contrib.auth.models import (AbstractBaseUser, AbstractUser,
+                                        BaseUserManager, PermissionsMixin)
 from django.db import models
 
 
@@ -53,7 +51,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         default=False,
         help_text="Designates whether the user can log into this admin site.",
     )
-
 
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"

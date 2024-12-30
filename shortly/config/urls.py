@@ -22,7 +22,7 @@ apipatterns = [
     path("link", include("shortly.links.urls")),
 ]
 urlpatterns = [
-    path('accounts/', include('allauth.urls')),
+    path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("api/", include(apipatterns)),
 ]
