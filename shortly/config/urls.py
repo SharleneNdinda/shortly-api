@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 apipatterns = [
-    path("link", include("shortly.links.urls")),
+    path("link/", include("shortly.links.urls")),
 ]
 urlpatterns = [
     path("accounts/", include("allauth.urls")),

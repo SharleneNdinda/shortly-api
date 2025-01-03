@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "shortly.links",
     "shortly.authentication",
     "shortly.common",
@@ -132,9 +133,9 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 # Add these new lines
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -163,3 +164,8 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by email
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
+
+# RAPID_API
+RAPID_API_HOST = (os.getenv("RAPID_API_HOST", ""),)
+X_RAPID_API_KEY = (os.getenv("X_RAPID_API_KEY", ""),)
+X_RAPID_API_SECRET = (os.getenv("X_RAPID_API_SECRET", ""),)
