@@ -1,8 +1,12 @@
 # Create your models here.
 import uuid
 
-from django.contrib.auth.models import (AbstractBaseUser, AbstractUser,
-                                        BaseUserManager, PermissionsMixin)
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    AbstractUser,
+    BaseUserManager,
+    PermissionsMixin,
+)
 from django.db import models
 
 

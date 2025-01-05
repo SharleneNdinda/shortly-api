@@ -13,9 +13,7 @@ class AbstractBase(models.Model):
     )
     active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
-    created_by = models.UUIDField()
     updated = models.DateTimeField(auto_now=True)
-    updated_by = models.UUIDField()
 
     class Meta:
         abstract = True

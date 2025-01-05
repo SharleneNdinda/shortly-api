@@ -1,10 +1,9 @@
 from rest_framework.serializers import ModelSerializer
 
-from shortly.common.views import BaseSerializer
 from shortly.links.models import Link
 
 
-class LinkSerializer(BaseSerializer):
+class LinkSerializer(ModelSerializer):
     """Link Serializer."""
 
     class Meta:
