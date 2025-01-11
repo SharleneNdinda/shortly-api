@@ -55,6 +55,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         default=False,
         help_text="Designates whether the user can log into this admin site.",
     )
+    google_token = models.CharField(
+        blank=True,
+        null=True,
+    )
 
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"

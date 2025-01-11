@@ -145,6 +145,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Custom user model
 AUTH_USER_MODEL = "authentication.User"
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by email
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+# Django all-auth
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
         "SCOPE": [
@@ -158,14 +166,17 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
-    # `allauth` specific authentication methods, such as login by email
-    "allauth.account.auth_backends.AuthenticationBackend",
-]
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 
-# RAPID_API
-RAPID_API_HOST = (os.getenv("RAPID_API_HOST", ""),)
-X_RAPID_API_KEY = (os.getenv("X_RAPID_API_KEY", ""),)
-X_RAPID_API_SECRET = (os.getenv("X_RAPID_API_SECRET", ""),)
+SOCIALACCOUNT_STORE_TOKENS = True
+
+# Redirect
+LOGIN_REDIRECT_URL = '/api/link/homepage/'
+
+# Rapid API 
+RAPID_API_HOST = os.getenv("RAPID_API_HOST", "")
+X_RAPID_API_KEY = os.getenv("X_RAPID_API_KEY", "")
+X_RAPID_API_SECRET = os.getenv("X_RAPID_API_SECRET", "")
