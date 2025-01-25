@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.decorators import action
+
 from shortly.links.models import Link
 from shortly.links.serializers import LinkSerializer
 
@@ -15,5 +16,4 @@ class LinkViewSet(ModelViewSet):
 
     @action(detail=False)
     def homepage(self, request):
-        return  render(request=request,
-        template_name= 'home.html')
+        return render(request=request, template_name="home.html")

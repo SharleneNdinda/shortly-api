@@ -57,7 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    # Add the account middleware:
+    "shortly.common.google_auth.GoogleAuthMiddleware",
     "allauth.account.middleware.AccountMiddleware",
 ]
 
@@ -174,9 +174,12 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 SOCIALACCOUNT_STORE_TOKENS = True
 
 # Redirect
-LOGIN_REDIRECT_URL = '/api/link/homepage/'
+LOGIN_REDIRECT_URL = "/api/link/homepage/"
 
-# Rapid API 
+# Rapid API
 RAPID_API_HOST = os.getenv("RAPID_API_HOST", "")
 X_RAPID_API_KEY = os.getenv("X_RAPID_API_KEY", "")
 X_RAPID_API_SECRET = os.getenv("X_RAPID_API_SECRET", "")
+
+# Google Credentials
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
