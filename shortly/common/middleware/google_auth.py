@@ -1,9 +1,10 @@
 """Middleware to authenticate using Google tokens."""
 
 import re
-import requests
 
+import requests
 from allauth.socialaccount.models import SocialToken
+
 
 class GoogleAuthMiddleware:
     """Google Authentication Middleware."""
@@ -28,7 +29,9 @@ class GoogleAuthMiddleware:
         social_token = SocialToken.objects.get(
             account__user=request.user, account__provider="google"
         )
-        url = f"https://oauth2.googleapis.com/tokeninfo?access_token={social_token.token}"
+        url = (
+            f"https://oauth2.googleapis.com/tokeninfo?access_token={social_token.token}"
+        )
         response = requests.get(url)
 
         # Continue processing the request

@@ -57,7 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "shortly.common.google_auth.GoogleAuthMiddleware",
+    "shortly.common.middleware.google_auth.GoogleAuthMiddleware",
     "allauth.account.middleware.AccountMiddleware",
 ]
 
